@@ -71,7 +71,6 @@ namespace Windows_Shadow_Opacity_Bug {
             clickBorder.Opacity = 0;
             clickBorder.GestureRecognizers.Add(tap);
 
-            //resize everything to fit screen
             //screen resize function
             mainPage.SizeChanged += delegate {
                 if (mainPage.Width > 0 && mainPage.Height > 0) {
