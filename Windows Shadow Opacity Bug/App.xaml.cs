@@ -1,4 +1,5 @@
-﻿
+﻿using System.Diagnostics;
+
 namespace Windows_Shadow_Opacity_Bug {
     public partial class App : Application {
         private double screenWidth;
@@ -66,9 +67,11 @@ namespace Windows_Shadow_Opacity_Bug {
             //border to take clicks
             Border clickBorder = new();
             abs.Children.Add(clickBorder);
+            clickBorder.BackgroundColor = Colors.Blue;
             clickBorder.Opacity = 0;
             clickBorder.GestureRecognizers.Add(tap);
 
+            //resize everything to fit screen
             //screen resize function
             mainPage.SizeChanged += delegate {
                 if (mainPage.Width > 0 && mainPage.Height > 0) {
